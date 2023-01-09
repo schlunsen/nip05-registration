@@ -15,7 +15,6 @@ const app = useAppConfig() as AppConfigInput
           Copyright © 2022 Be kind or rewind.
           <br class="" />
           All rights reserved. <br />
-          
         </div>
       </div>
     </section>

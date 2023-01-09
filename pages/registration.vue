@@ -4,15 +4,22 @@ import { capitalize } from '~/utils/str'
 // composable
 const { t } = useLang()
 
-const clickRegistration = () => {
+const clickRegistration = async () => {
   console.log('click registration')
 
   // Post data
+  const url = 'http://localhost:8000/api/create'
+  const username = 'Test2'
+  const formData = new FormData()
+  formData.append('username', username)
+  const data = await $fetch(url, {
+    method: 'POST',
+    body: formData,
+  })
 
   // Display QR code
-  var qrcode = new QRCode(document.getElementById('qrcode'), {
-    text:
-      'lnbc1p3mhu6rpp5kfp6taxpvdfck9hwctnxudv037x8ahel5q0csy5vwuqv96z0j64qdqu2askcmr9wssx7e3q2dshgmmndp5scqzpgxqyz5vqsp5gg60v3zkjv244t0jv3k70x75w89qrlyfjwx458rhyf2h6ag4y5gq9qyyssqm3fhh7ekquhudgg0w7kmcv285vkjj3mqju2vlqzq8e6ktvxcjvdnjujwy5yvtusegunzfxc6mcus5almk4vnmewfhn8qvx365mza5ycp8vkh7d',
+  const qrcode = new QRCode(document.getElementById('qrcode'), {
+    text: data.lnurl,
     width: 128 * 2,
     height: 128 * 2,
     colorDark: '#000000',
@@ -70,8 +77,8 @@ useHead(() => ({
               Username
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="username"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               placeholder="Username"
             />
@@ -84,8 +91,8 @@ useHead(() => ({
               Public key
             </label>
             <input
-              class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="publickey"
+              class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               placeholder="npub..."
             />
@@ -93,19 +100,29 @@ useHead(() => ({
           </div>
           <div class="flex-row-reverse">
             <button
-              @click="clickRegistration"
               class="bg-blue-700 w-full hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
+              @click="clickRegistration"
             >
               Register
             </button>
           </div>
         </form>
-        <p class="text-center text-gray-500 text-xs">
-          &copy;2022 Be Kind Or Rewind. All rights reserved.
-        </p>
-        <div class="flex justify-end">
-          <div id="qrcode" class="w-full"></div>
+
+        <div class="flex justify-center">
+          <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="w-full flex-justify-center">
+              <div id="qrcode" class=""></div>
+            </div>
+            <p class="mt-4">Pay 2500 satoshis in order to get verified</p>
+            <div class="w-full">
+              <button
+                class="bg-blue-700 w-full hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
         </div>
       </PageSection>
     </PageBody>
