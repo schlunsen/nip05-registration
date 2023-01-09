@@ -47,6 +47,7 @@ const clickRegistration = async () => {
     if (response.names[username.value]) {
       clearInterval(intervalObj)
       console.log("PAID!")
+      navigateTo('/finish')
     }
     console.log(response)
   }, 1000)
