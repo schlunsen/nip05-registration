@@ -86,7 +86,7 @@ const toggleOptions = (show?: boolean) => {
               :to="{ name: 'index' }"
             >
               <span class="sr-only">home</span>
-              <span class="flex items-center text-lg ml-6" >
+              <span class="flex items-center text-lg ml-6" style="font-size:35px">
                 
                 <img width="30px" src="~/assets/images/logo.png" class="mr-4" />
 

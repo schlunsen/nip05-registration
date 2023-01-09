@@ -12,8 +12,6 @@ const username = ref('')
 const config = useRuntimeConfig()
 
 const clickRegistration = async () => {
-  console.log('click registration')
-
   // Post data
   const url = `${config.public.api_url}/api/create/`
 
@@ -60,7 +58,7 @@ useHead(() => ({
     <PageBody>
       <PageSection>
         <hr class="mb-12" />
-        <div v-if="!data.lnurl">
+        <div v-if="!data.lnurl" class="">
           <div class="mb-6">
             <p>
               Welcome to our public key and username registration service! We
