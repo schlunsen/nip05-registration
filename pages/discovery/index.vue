@@ -3,7 +3,7 @@ import { ref } from 'vue'
 definePageMeta({
   layout: 'page',
 })
-const config = useRuntimeConfig();
+const config = useRuntimeConfig()
 const url = `${config.public.api_url}/users/`
 const profiles = ref([] as any)
 $fetch(url, {
@@ -20,12 +20,20 @@ $fetch(url, {
     </PageHeader>
     <PageBody>
       <PageSection>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia autem
-          debitis ab dolorum tempore placeat possimus perferendis porro sit aut
-          nobis quasi hic consequuntur, atque impedit nihil totam illo odit?
-          {{ profiles }}
-        </p>
+        <div class="flex">
+          <nuxt-link v-for="profile in profiles" :to="`/users/${profile.name}`">
+            <div  class="flex items-center ml-12">
+              <div class="flex-shrink-0 w-10 h-10">
+                <img class="w-full h-full rounded-full" alt="" />
+              </div>
+              <div class="ml-2 text-sm">
+                <p class="md:text-base whitespace-pre">
+                  {{ profile.name }}
+                </p>
+              </div>
+            </div>
+          </nuxt-link>
+        </div>
       </PageSection>
       <PageSection> </PageSection>
     </PageBody>
