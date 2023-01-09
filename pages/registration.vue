@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
 import { ref } from 'vue'
+import { useRuntimeConfig } from '#app'
 
 // composable
 const { t } = useLang()
@@ -8,12 +9,14 @@ const { t } = useLang()
 const data = ref({} as any)
 const username = ref('')
 
+const config = useRuntimeConfig()
+
 const clickRegistration = async () => {
   console.log('click registration')
 
   // Post data
-  const url = 'http://localhost:8000/api/create'
-  
+  const url = `${config.public.api_url}/api/create/'`
+
   const formData = new FormData()
   formData.append('username', username.value)
   data.value = await $fetch(url, {
@@ -126,7 +129,12 @@ useHead(() => ({
             <div class="w-full flex-justify-center">
               <div id="qrcode" class=""></div>
             </div>
-            <p class="mt-4 mb-4 text-black text-xl">Pay {{ data.amount }} satoshis in order to get verified for <span class="font-bold">{{ data.username }}@{{ data.domain }}</span></p>
+            <p class="mt-4 mb-4 text-black text-xl">
+              Pay {{ data.amount }} satoshis in order to get verified for
+              <span class="font-bold"
+                >{{ data.username }}@{{ data.domain }}</span
+              >
+            </p>
             <div class="w-full">
               <button
                 class="bg-blue-700 w-full hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
