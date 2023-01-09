@@ -13,9 +13,9 @@ const app = useAppConfig() as AppConfigInput
         <div class="mb-1">Be Kind Or Rewind</div>
         <div class="text-xs text-gray-600 dark:text-gray-400">
           Copyright © 2022 Be kind or rewind.
-          <br />
+          <br class="" />
           All rights reserved. <br />
-          Made with <span class="text-red-500">❤</span>
+          
         </div>
       </div>
     </section>

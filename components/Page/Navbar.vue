@@ -11,11 +11,6 @@ export interface IMenuItem {
 const { t } = useLang()
 const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
-  {
-    type: 'link',
-    text: t('pages.getting-started.nav'),
-    route: { name: 'getting-started' },
-  },
   { type: 'link', text: 'registration', route: { name: 'registration' } },
 
   {

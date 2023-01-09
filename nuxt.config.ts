@@ -66,6 +66,14 @@ export default defineNuxtConfig({
     // global transition
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
+    head: {
+      script: [
+        {
+          src:
+            'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
+        },
+      ],
+    },
   },
 
   // localization - i18n config
