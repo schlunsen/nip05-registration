@@ -49,8 +49,45 @@ const copyBash = () => {
 <template>
   <PageWrapper class="flex-1 flex">
     <PageBody class="flex-1 flex">
-      <PageSection class="flex-1 flex items-center">
-        <input id="switch" type="input" class="hidden" />
+      <PageSection class="max-w-8xl w-full mx-auto">
+        <div class="w-full mb-8">
+          <h2 class="text-3xl font-bold mb-2">📛 What is NIP-05 for Nostr?</h2>
+          <p>
+            It's a human readable identifier for your public key. It makes
+            finding your profile on Nostr easier. It makes identifying your
+            account easier. A NIP-05 ID also provides you with a shiny verified
+            checkmark!
+          </p>
+        </div>
+        <div class="w-full mb-8">
+          <h2 class="text-3xl font-bold mb-2">
+            🎁 Raising funds for Nostr development
+          </h2>
+          <p>
+            To support the people that make clients and relays for Nostr and
+            people that help provide infrastructure, we donated 50% of all of
+            our revenue for 24 hours, which totals to 532k sat.
+          </p>
+        </div>
+        <div class="w-full mb-8">
+          <h2 class="text-3xl font-bold mb-2">
+            ✅ Why get an identifier on Nostr Plebs?
+          </h2>
+          <p>
+            Nostr Plebs is a NIP-05 ID and Nostr services provider built by Bitcoiners for Bitcoiners. Nostr Plebs instantly groups your profile among other users, allowing new Nostr users to easily find you and make you identifiable. Just type @nostrplebs.com in your Nostr client and you immediately see all Nostr Plebs users or go to our directory.
+          </p>
+        </div>
+        <div class="w-full mb-8">
+          <h2 class="text-3xl font-bold mb-2">
+            📖 How to get a NIP-05 identifier with Nostr Plebs?
+          </h2>
+          <p>
+            <nuxt-link class="link font-bold" :to="'/registration'">Register</nuxt-link> your NIP-05 identifier through our registration portal. There you may choose between three different domains for your NIP-05 ID:
+          </p>
+        </div>
+
+        
+
       </PageSection>
     </PageBody>
   </PageWrapper>

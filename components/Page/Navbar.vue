@@ -19,6 +19,8 @@ const menus = computed((): IMenuItem[] => [
     route: { name: 'dashboard' },
   },
 ])
+
+
 </script>
 
 <template>

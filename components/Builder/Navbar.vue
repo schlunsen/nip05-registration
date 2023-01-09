@@ -86,10 +86,10 @@ const toggleOptions = (show?: boolean) => {
               :to="{ name: 'index' }"
             >
               <span class="sr-only">home</span>
-              <span class="flex items-center">
-                <IconUil:sun
-                  class="inline-block mr-2 text-lg text-yellow-400"
-                />
+              <span class="flex items-center text-lg ml-6" >
+                
+                <img width="30px" src="~/assets/images/logo.png" class="mr-4" />
+
                 {{ app.name }}
               </span>
             </NuxtLink>
