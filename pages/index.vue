@@ -87,7 +87,7 @@ const copyBash = () => {
           </div>
           <div class="w-full mb-8">
             <h2 class="text-3xl font-bold mb-2">
-              📖 How to get a NIP-05 identifier with Nostr Plebs?
+              📖 How to get a NIP-05 identifier with Be Kind Or Rewind?
             </h2>
             <p>
               <nuxt-link class="link font-bold" :to="'/registration'"
