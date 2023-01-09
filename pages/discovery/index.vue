@@ -3,7 +3,7 @@ import { ref } from 'vue'
 definePageMeta({
   layout: 'page',
 })
-
+const config = useRuntimeConfig();
 const url = `${config.public.api_url}/users/`
 const profiles = ref([] as any)
 $fetch(url, {
