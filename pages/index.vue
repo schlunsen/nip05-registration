@@ -74,11 +74,11 @@ const copyBash = () => {
           </div>
           <div class="w-full mb-8">
             <h2 class="text-3xl font-bold mb-2">
-              ✅ Why get an identifier on Nostr Plebs?
+              ✅ Why get an identifier on Be Kind Or Rewind?
             </h2>
             <p>
-              Nostr Plebs is a NIP-05 ID and Nostr services provider built by
-              Bitcoiners for Bitcoiners. Nostr Plebs instantly groups your
+              Be Kind Or Rewind is a NIP-05 ID and Nostr services provider built by
+              Bitcoiners for Bitcoiners. Be Kind Or Rewind instantly groups your
               profile among other users, allowing new Nostr users to easily find
               you and make you identifiable. Just type @bekindorrewind.com in your
               Nostr client and you immediately see all BeKindOrRewind users or go
