@@ -128,7 +128,7 @@ useHead(() => ({
               <div id="qrcode" class=""></div>
             </div>
             <p class="mt-4 mb-4 text-black text-xl">
-              Pay {{ data.amount }} satoshis in order to get verified for
+              Pay {{ data.amount }} satoshis in order to get verified as
               <span class="font-bold"
                 >{{ data.username }}@{{ data.domain }}</span
               >
