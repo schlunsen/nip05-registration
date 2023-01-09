@@ -5,7 +5,7 @@ import { ref } from 'vue'
 // composable
 const { t } = useLang()
 
-const data = ref({})
+const data = ref({} as any)
 const username = ref('')
 
 const clickRegistration = async () => {
@@ -22,6 +22,7 @@ const clickRegistration = async () => {
   })
   setTimeout(() => {
     // Display QR code
+    // @ts-ignore
     const qrcode = new QRCode(document.getElementById('qrcode'), {
       text: data.value.lnurl,
       width: 128 * 2,
