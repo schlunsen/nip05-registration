@@ -35,6 +35,15 @@ const clickRegistration = async () => {
       correctLevel: 2,
     })
   }, 10)
+
+  // Start loop for polling for paymenent status
+  let intervalObj = setInterval(async () => {
+    const url = `${config.public.api_url}/.well-known/nostr.json?name=${username.value}`
+    let response = await $fetch(url, {
+      method: 'GET',
+    })
+    console.log(response)
+  }, 1000)
 }
 
 // compiler macro
