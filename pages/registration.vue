@@ -41,8 +41,9 @@ const clickRegistration = async () => {
     const url = `${config.public.api_url}/.well-known/nostr.json?name=${username.value}`
     let response = await $fetch(url, {
       method: 'GET',
-    })
+    }) as any;
 
+    // @ts-ignore
     if (response.names[username.value]) {
       clearInterval(intervalObj)
       console.log("PAID!")
