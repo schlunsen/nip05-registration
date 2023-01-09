@@ -15,7 +15,7 @@ const clickRegistration = async () => {
   console.log('click registration')
 
   // Post data
-  const url = `${config.public.api_url}/api/create/'`
+  const url = `${config.public.api_url}/api/create/`
 
   const formData = new FormData()
   formData.append('username', username.value)
