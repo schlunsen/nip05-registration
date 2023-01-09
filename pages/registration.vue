@@ -8,6 +8,7 @@ const { t } = useLang()
 
 const data = ref({} as any)
 const username = ref('')
+const pubKey = ref('')
 
 const config = useRuntimeConfig()
 
@@ -17,6 +18,7 @@ const clickRegistration = async () => {
 
   const formData = new FormData()
   formData.append('username', username.value)
+  formData.append('pub_key', pubKey.value)
   data.value = await $fetch(url, {
     method: 'POST',
     body: formData,
@@ -104,6 +106,7 @@ useHead(() => ({
                 id="publickey"
                 class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
+                v-model="pubKey"
                 placeholder="npub..."
               />
               <p class="text-red-500 text-xs italic">

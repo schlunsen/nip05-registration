@@ -80,8 +80,8 @@ const copyBash = () => {
               Nostr Plebs is a NIP-05 ID and Nostr services provider built by
               Bitcoiners for Bitcoiners. Nostr Plebs instantly groups your
               profile among other users, allowing new Nostr users to easily find
-              you and make you identifiable. Just type @nostrplebs.com in your
-              Nostr client and you immediately see all Nostr Plebs users or go
+              you and make you identifiable. Just type @bekindorrewind.com in your
+              Nostr client and you immediately see all BeKindOrRewind users or go
               to our directory.
             </p>
           </div>
