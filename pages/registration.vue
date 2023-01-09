@@ -42,6 +42,11 @@ const clickRegistration = async () => {
     let response = await $fetch(url, {
       method: 'GET',
     })
+
+    if (response.names[username.value]) {
+      clearInterval(intervalObj)
+      console.log("PAID!")
+    }
     console.log(response)
   }, 1000)
 }
